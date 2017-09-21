@@ -22,7 +22,7 @@
   </div>
   <div class="form-group">
       {!! Form::label('profile', 'Your Picture') !!}
-      {!! Form::file('profile', ['class' => 'form-control']) !!}
+      {!! Form::file('profile') !!}
 
       <br>
         {!! Form::submit("Register", ['class' => 'btn btn-primary btn-block']) !!}
