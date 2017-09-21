@@ -40,6 +40,7 @@ class userController extends Controller
         $post->name = $request->name;
         $post->email = $request->email;
         $post->password = $request->password;
+        $post->role = $request->role;
 
         $post->save();
     }

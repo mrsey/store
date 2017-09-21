@@ -12,7 +12,13 @@
 */
 Route::get('/','pageController@home');
 Route::get('home','pageController@home');
-Route::get('login','pageController@login');
-Route::get('register','pageController@register');
 Route::resource('product','ProductController');
 Route::resource('user','userController');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+
+
+Route::get('/home', 'HomeController@index')->name('home');

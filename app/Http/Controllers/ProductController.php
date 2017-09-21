@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class ProductController extends Controller
 {
@@ -23,8 +24,13 @@ class ProductController extends Controller
      */
     public function create()
     {
-        //
-        return view('adminpanel.postProduct');
+        if (Auth::guest()) {
+          return view('auth.login');
+        }
+        else {
+          return view('adminpanel.postProduct');
+        }
+
     }
 
     /**
